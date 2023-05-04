@@ -1,0 +1,1 @@
+Salam, vsem rabotat'!
