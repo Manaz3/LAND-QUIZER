@@ -12,7 +12,8 @@ function App(): JSX.Element {
         <Routes>
           <Route path="/" element={<Nav />}>
             <Route path="register" element={<RegisterPage />} />
-            <Route path="auth" element={<LoginPage />} />
+
+            <Route path="login" element={<LoginPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
