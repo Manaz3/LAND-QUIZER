@@ -22,7 +22,6 @@ function LoginPage(): JSX.Element {
       body: JSON.stringify({ name, password }),
     });
     const response = await res.json();
-    console.log(response);
     
     dispatch({ type: 'user/login', payload: response });
     navigate('/');

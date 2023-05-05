@@ -57,12 +57,10 @@ authRouter.post('/login', async (req, res) => {
   res.json({ success: true, name: user.name, id: user.id, totalScore: user.total_score });
 });
 
-authRouter.get('/logout', async (req, res) => {
+authRouter.get('/logout', (req, res) => {
+  console.log('121213123');
   try {
-    req.session.destroy((error) => {
-      if (error) {
-        res.status(500).json({ message: 'Ошибка при удалении сессии' });
-      }
+    req.session.destroy(() => {
       res.clearCookie('user_sid').json({ message: 'Успешный выход' });
     });
   } catch (error) {

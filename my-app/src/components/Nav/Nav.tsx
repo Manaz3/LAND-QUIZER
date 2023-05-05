@@ -1,12 +1,20 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { RootState, store } from '../../types/redux/store';
 
 function Nav(): JSX.Element {
-  const user = useSelector((store: RootState) => store.userInfo)
+  const { user } = useSelector((store: RootState) => store.userInfo)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  console.log(user);
+  const logOut = (): void => {
+    fetch('http://localhost:3001/api/logout')
+      .then((res) => res.json())
+      .then(() => dispatch({ type: 'user/logout' }));
+      navigate('/')
+  };
+
   
   return (
     <div>
@@ -17,10 +25,10 @@ function Nav(): JSX.Element {
           </Link>
           <ul className="right hide-on-med-and-down">
             {user ? (<><li>
-                <span>Привет, {user?.name}!</span>
+                <span>Привет, {user!.name}!</span>
               </li>
               <li>
-                <NavLink to="/logout">Выход</NavLink>
+                <Link to="#" onClick={logOut}>Выход</Link>
               </li></>
             ) : (
               <>
