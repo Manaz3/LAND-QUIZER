@@ -1,4 +1,5 @@
 import { User } from './user/User';
+import { Flash } from './game/Flash'
 
 export type Action =
   | {
@@ -15,4 +16,9 @@ export type Action =
   | {
       type: 'user/minusScore';
       payload: number;
+    }
+  | {
+      type: 'flash/initialFlash';
+      payload: Flash;
     };
+
