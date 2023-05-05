@@ -4,6 +4,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+import './App.css'
 
 function App(): JSX.Element {
   return (

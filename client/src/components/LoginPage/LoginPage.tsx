@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import './LoginPage.css'
 
 function LoginPage(): JSX.Element {
 
