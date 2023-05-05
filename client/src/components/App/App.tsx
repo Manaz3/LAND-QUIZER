@@ -10,10 +10,10 @@ function App(): JSX.Element {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Nav />} >
-          <Route path="register" element={<RegisterPage />} />
-          <Route path="auth" element={<LoginPage />} />
-        </Route>
+          <Route path="/" element={<Nav />}>
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="auth" element={<LoginPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </Provider>
