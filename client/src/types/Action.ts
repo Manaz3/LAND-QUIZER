@@ -16,9 +16,11 @@ export type Action =
   | {
       type: 'user/minusScore';
       payload: number;
+
     }
   | {
       type: 'flash/initialFlash';
       payload: Theme[];
     };
+
 

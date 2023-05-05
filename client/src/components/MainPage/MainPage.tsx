@@ -1,8 +1,13 @@
+
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../types/redux/store";
 import Card from "../Card/Card";
 import { Flash } from "../../types/game/Flash";
 
+
+import React from 'react';
+
+import './MainPage.css'
 function MainPage(): JSX.Element {
   const { themes } = useSelector((store: RootState) => store.flash);
 
