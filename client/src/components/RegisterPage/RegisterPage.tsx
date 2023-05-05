@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -66,8 +67,11 @@ function RegisterPage(): JSX.Element {
           </button>
         </form>
       </div>
+
     </div>
   );
 }
 
+
 export default RegisterPage;
+

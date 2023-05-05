@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { RootState, store } from '../../types/redux/store';
@@ -15,7 +16,7 @@ function Nav(): JSX.Element {
       navigate('/')
   };
 
-  
+ 
   return (
     <div>
       <nav>
@@ -24,6 +25,7 @@ function Nav(): JSX.Element {
             Logo
           </Link>
           <ul className="right hide-on-med-and-down">
+
             {user ? (<><li>
                 <span>Привет, {user!.name}!</span>
               </li>
@@ -40,6 +42,7 @@ function Nav(): JSX.Element {
                 </li>
               </>
             )}
+
           </ul>
         </div>
       </nav>
