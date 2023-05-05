@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import './RegisterPage.css'
+import './RegisterPage.css';
 
 function RegisterPage(): JSX.Element {
   const [name, setName] = useState('');
@@ -29,47 +29,51 @@ function RegisterPage(): JSX.Element {
   };
 
   return (
-    <div>
-      <div className='image-bg'></div>
-    <div className="container">
-      <div className="row">
-        <form className="col s12" onSubmit={handleSubmit}>
-          <div className="row1">
-            <div className="input-field col s12">
-              <input
-                type="text"
-                className="validate"
-                onChange={(event) => setName(event.target.value)}
-                placeholder="Name"
-              />
-            </div>
+    <div className="main">
+      <div className="image-bg">
+        <div className="row">
+          <div className="container">
+            <form className="col s12 form-reg" onSubmit={handleSubmit}>
+              <div className="row1">
+                <div className="input-field col s12">
+                  <input
+                    type="text"
+                    className="validate"
+                    onChange={(event) => setName(event.target.value)}
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+              <div className="row1">
+                <div className="input-field col s12">
+                  <input
+                    type="password"
+                    className="validate"
+                    onChange={(event) => setPassword(event.target.value)}
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+              <div className="row1">
+                <div className="input-field col s12">
+                  <input
+                    type="password"
+                    className="validate"
+                    onChange={(event) => setPassword2(event.target.value)}
+                    placeholder="Password repeat"
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="waves-effect waves-light btn butt"
+              >
+                Зарегистрироваться
+              </button>
+            </form>
           </div>
-          <div className="row1">
-            <div className="input-field col s12">
-              <input
-                type="password"
-                className="validate"
-                onChange={(event) => setPassword(event.target.value)}
-                placeholder="Password"
-              />
-            </div>
-          </div>
-          <div className="row1">
-            <div className="input-field col s12">
-              <input
-                type="password"
-                className="validate"
-                onChange={(event) => setPassword2(event.target.value)}
-                placeholder="Password repeat"
-              />
-            </div>
-          </div>
-          <button type="submit" className="waves-effect waves-light btn butt">
-            Зарегистрироваться
-          </button>
-        </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

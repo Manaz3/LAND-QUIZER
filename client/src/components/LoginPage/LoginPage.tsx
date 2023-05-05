@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import './LoginPage.css'
+import './LoginPage.css';
 
 function LoginPage(): JSX.Element {
-
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
@@ -15,7 +13,7 @@ function LoginPage(): JSX.Element {
   const handleSubmit = async (
     event: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
-    event.preventDefault()
+    event.preventDefault();
     const res = await fetch('http://localhost:3001/api/login', {
       method: 'POST',
       headers: {
@@ -24,21 +22,26 @@ function LoginPage(): JSX.Element {
       body: JSON.stringify({ name, password }),
     });
     const response = await res.json();
-    
+
     dispatch({ type: 'user/login', payload: response });
     navigate('/');
-  }
+  };
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container-log">
+      <div className="rowww">
         <form className="col s12" onSubmit={handleSubmit}>
-          <div className="row">
+          <div className="rower">
             <div className="input-field col s12">
-              <input type="text" className="validate"  onChange={(event) => setName(event.target.value)} placeholder="Name" />
+              <input
+                type="text"
+                className="validate"
+                onChange={(event) => setName(event.target.value)}
+                placeholder="Name"
+              />
             </div>
           </div>
-          <div className="row">
+          <div className="rower">
             <div className="input-field col s12">
               <input
                 type="password"
@@ -53,7 +56,6 @@ function LoginPage(): JSX.Element {
           </button>
         </form>
       </div>
-
     </div>
   );
 }
