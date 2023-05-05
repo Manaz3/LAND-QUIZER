@@ -1,8 +1,7 @@
 import { Action } from '../../Action';
 import { State } from '../../game/State';
 
-const initialState: State = {
-  flashes: [],
+export const initialState: State = {
   themes: []
 };
 
@@ -12,7 +11,7 @@ export const flashReducer = (
 ): State => {
   switch (action.type) {
     case 'flash/initialFlash':
-      return { ...state, flashes: action.payload };
+      return { ...state, themes: action.payload };
     default:
       return state;
   }

@@ -5,7 +5,7 @@ import { RootState } from '../../types/redux/store';
 
 
 
-const Card = ({ flash }):JSX.Element => {
+const Card = ( flash ):JSX.Element => {
     const [modalActive, setModalActive] = useState(true)
 
     const onHandleClick = ():void => {
