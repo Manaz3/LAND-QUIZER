@@ -1,7 +1,9 @@
 import { Action } from '../../Action';
 import { State } from '../../user/State';
 
+
 const initialState: State = { user: undefined };
+
 
 export const userReducer = (
   state: State = initialState,
@@ -13,6 +15,7 @@ export const userReducer = (
     case 'user/logout':
       return { ...state, user: undefined };
     case 'user/plusScore':
+
       return {
         ...state,
         user: {
@@ -28,6 +31,7 @@ export const userReducer = (
           totalScore: state.user!.totalScore - action.payload,
         },
       };
+
     default:
       return state;
   }

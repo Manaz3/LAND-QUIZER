@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.form-reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  margin-top: 15px;
+  margin-left: 100px;
+  width: 300px;
+  /* height: 300px; */
+  border-radius: 5px;
+  box-sizing: border-box;
+  border-style: solid;
+  position: absolute;
+  /* top: 317px;
+    right: 537px; */
+  background-color: #1b295a;
+}
+.image-bg {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 1400px; /* Ширина изображения */
+  height: 600px; /* Высота изображения */
+  background: url(foto.png); /* Прописываем путь к файлу */
+  background-repeat: no-repeat; /* Не повторяем */
+  background-size: cover; /* Размер фона */
+  background-position: center;
+}
+
+.butt {
+  /* background-size: cover; */
+
+  margin-bottom: 20px;
+}
