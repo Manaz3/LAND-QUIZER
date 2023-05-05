@@ -13,11 +13,6 @@ export const userReducer = (
     case 'user/logout':
       return { ...state, user: undefined };
     case 'user/plusScore':
-<<<<<<< HEAD:client/src/types/redux/reducers/UserReducer.ts
-      return { ...state, user: {...state.user!, totalScore: state.user!.totalScore + action.payload}};
-    case 'user/minusScore':
-      return { ...state, user: {...state.user!, totalScore: state.user!.totalScore - action.payload}};
-=======
       return {
         ...state,
         user: {
@@ -33,7 +28,6 @@ export const userReducer = (
           totalScore: state.user!.totalScore - action.payload,
         },
       };
->>>>>>> routes:my-app/src/types/redux/reducers/UserReducer.ts
     default:
       return state;
   }
