@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import './RegisterPage.css'
 
 function RegisterPage(): JSX.Element {
   const [name, setName] = useState('');
@@ -28,10 +29,12 @@ function RegisterPage(): JSX.Element {
   };
 
   return (
+    <div>
+      <div className='image-bg'></div>
     <div className="container">
       <div className="row">
         <form className="col s12" onSubmit={handleSubmit}>
-          <div className="row">
+          <div className="row1">
             <div className="input-field col s12">
               <input
                 type="text"
@@ -41,7 +44,7 @@ function RegisterPage(): JSX.Element {
               />
             </div>
           </div>
-          <div className="row">
+          <div className="row1">
             <div className="input-field col s12">
               <input
                 type="password"
@@ -51,7 +54,7 @@ function RegisterPage(): JSX.Element {
               />
             </div>
           </div>
-          <div className="row">
+          <div className="row1">
             <div className="input-field col s12">
               <input
                 type="password"
@@ -61,11 +64,12 @@ function RegisterPage(): JSX.Element {
               />
             </div>
           </div>
-          <button type="submit" className="waves-effect waves-light btn">
+          <button type="submit" className="waves-effect waves-light btn butt">
             Зарегистрироваться
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

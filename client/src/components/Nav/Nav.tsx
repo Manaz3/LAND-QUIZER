@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { RootState, store } from '../../types/redux/store';
+import './Nav.css'
 
 function Nav(): JSX.Element {
   const { user } = useSelector((store: RootState) => store.userInfo)
@@ -19,9 +20,9 @@ function Nav(): JSX.Element {
   return (
     <div>
       <nav>
-        <div className="nav-wrapper">
-          <Link to="/" className="brand-logo">
-            Logo
+        <div className="nav-wrapper indigo lighten-1">
+          <Link to="/" className="brand-logo name">
+            Люляшки
           </Link>
           <ul className="right hide-on-med-and-down">
             {user ? (<><li>
