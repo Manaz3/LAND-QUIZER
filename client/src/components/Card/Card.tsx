@@ -11,13 +11,14 @@ const Card = ({ flashes }: { flashes: Flash }): JSX.Element => {
 
   return (
     <div key={flashes.id} className="Card" onClick={() => setModalActive(true)}>
-      {flashes.opened === false ? (
+      {/* {flashes.opened === false ? ( */}
         <div className="closed-card" onClick={onHandleClick}>
           {flashes.score}
+          {flashes.question}
         </div>
-      ) : (
+      {/* ) : ( */}
         <Modal active={modalActive} setActive={setModalActive} />
-      )}
+      {/* )} */}
     </div>
   );
 };

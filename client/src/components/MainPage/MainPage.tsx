@@ -11,7 +11,7 @@ function MainPage(): JSX.Element {
   fetch("http://localhost:3001/game")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       dispatch({
         type: "flash/initialFlash",
         payload: data,

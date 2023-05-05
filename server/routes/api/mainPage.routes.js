@@ -5,7 +5,7 @@ router.get("/game", async (req, res) => {
   try {
     const themes = await Theme.findAll({ include: Flash });
     console.log(themes);
-    res.json(themes);
+    // res.json(themes);
   } catch (error) {
     console.error(error);
     res.sendStatus(500);
