@@ -6,6 +6,5 @@ export type State = {
 
 export type Theme = {
   theme: string;
-  flashes: Flash[];
-  
+  Flashes: Flash[];
 }
