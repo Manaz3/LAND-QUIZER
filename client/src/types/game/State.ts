@@ -1,6 +1,10 @@
-import { Card } from './Card';
+import { Flash } from './Flash';
 
 export type State = {
-  themes: string[];
-  cards: Card[];
+  themes: Theme[];
 };
+
+export type Theme = {
+  theme: string;
+  Flashes: Flash[];
+}

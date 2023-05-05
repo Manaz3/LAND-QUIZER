@@ -1,12 +1,20 @@
-import { Provider } from 'react-redux';
-import { store } from '../../types/redux/store';
-import LoginPage from '../LoginPage/LoginPage';
-import RegisterPage from '../RegisterPage/RegisterPage';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from '../Nav/Nav';
-import './App.css'
+
+import { Provider, useDispatch } from "react-redux";
+import { store } from "../../types/redux/store";
+import LoginPage from "../LoginPage/LoginPage";
+import RegisterPage from "../RegisterPage/RegisterPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "../Nav/Nav";
+import MainPage from "../MainPage/MainPage";
+import { useReducer } from "react";
+import { flashReducer, initialState } from "../../types/redux/reducers/FlashReducer";
+
+
 
 function App(): JSX.Element {
+
+
+
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -15,6 +23,8 @@ function App(): JSX.Element {
             <Route path="register" element={<RegisterPage />} />
 
             <Route path="login" element={<LoginPage />} />
+            <Route path="game" element={<MainPage />}/>
+
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,4 +1,5 @@
 import { User } from './user/User';
+import { Theme } from './game/State'
 
 export type Action =
   | {
@@ -17,5 +18,9 @@ export type Action =
       payload: number;
 
     }
+  | {
+      type: 'flash/initialFlash';
+      payload: Theme[];
+    };
 
 
