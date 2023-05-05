@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 import './RegisterPage.css';
+
 
 function RegisterPage(): JSX.Element {
   const [name, setName] = useState('');
@@ -29,6 +31,8 @@ function RegisterPage(): JSX.Element {
   };
 
   return (
+
+
     <div className="main">
       <div className="image-bg">
         <div className="row">
@@ -73,6 +77,7 @@ function RegisterPage(): JSX.Element {
             </form>
           </div>
         </div>
+
       </div>
     </div>
   );

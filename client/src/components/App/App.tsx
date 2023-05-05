@@ -7,15 +7,23 @@ import Nav from '../Nav/Nav';
 import MainPage from '../MainPage/MainPage';
 import './App.css'
 
+
+
+
 function App(): JSX.Element {
+
+
+
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Nav />}>
             <Route path="register" element={<RegisterPage />} />
-            <Route path="auth" element={<LoginPage />} />
-            <MainPage />
+
+            <Route path="login" element={<LoginPage />} />
+            <Route path="game" element={<MainPage />}/>
+
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,5 +1,5 @@
 import { User } from './user/User';
-import { Flash } from './game/Flash'
+import { Theme } from './game/State'
 
 export type Action =
   | {
@@ -19,6 +19,6 @@ export type Action =
     }
   | {
       type: 'flash/initialFlash';
-      payload: Flash;
+      payload: Theme[];
     };
 

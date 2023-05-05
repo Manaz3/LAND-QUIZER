@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ import './Nav.css'
 
 function Nav(): JSX.Element {
   const { user } = useSelector((store: RootState) => store.userInfo);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -15,8 +17,10 @@ function Nav(): JSX.Element {
     fetch('http://localhost:3001/api/logout')
       .then((res) => res.json())
       .then(() => dispatch({ type: 'user/logout' }));
+
     navigate('/');
   };
+
 
   return (
     <div>
@@ -26,6 +30,7 @@ function Nav(): JSX.Element {
             Люляшки
           </Link>
           <ul className="right hide-on-med-and-down">
+
             {user ? (
               <>
                 <li>
