@@ -19,6 +19,7 @@ function Nav(): JSX.Element {
           </ul>
         </div>
       </nav>
+      <Outlet />
     </div>
   );
 }
