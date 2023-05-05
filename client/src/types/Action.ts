@@ -15,5 +15,7 @@ export type Action =
   | {
       type: 'user/minusScore';
       payload: number;
+
     }
+
 

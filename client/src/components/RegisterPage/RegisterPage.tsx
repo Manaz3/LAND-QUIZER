@@ -23,7 +23,7 @@ function RegisterPage(): JSX.Element {
       body: JSON.stringify({ name, password, password2 }),
     });
     const response = await res.json();
-    
+
     dispatch({ type: 'user/login', payload: response });
     navigate('/');
   };
