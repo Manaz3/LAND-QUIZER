@@ -5,6 +5,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import MainPage from '../MainPage/MainPage';
+import './App.css'
 
 function App(): JSX.Element {
   return (

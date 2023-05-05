@@ -4,6 +4,5 @@ import { flashReducer } from './FlashReducer';
 
 export const rootReducer = combineReducers({
   user: userReducer,
-  totalScore: userReducer,
   flash: flashReducer, 
 });

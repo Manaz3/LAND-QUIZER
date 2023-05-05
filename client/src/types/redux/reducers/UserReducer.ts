@@ -1,7 +1,9 @@
 import { Action } from '../../Action';
 import { State } from '../../user/State';
 
-const initialState: State = { user: undefined, totalScore: 0 };
+
+const initialState: State = { user: undefined };
+
 
 export const userReducer = (
   state: State = initialState,
@@ -13,9 +15,23 @@ export const userReducer = (
     case 'user/logout':
       return { ...state, user: undefined };
     case 'user/plusScore':
-      return { ...state, totalScore: state.totalScore + action.payload };
+
+      return {
+        ...state,
+        user: {
+          ...state.user!,
+          totalScore: state.user!.totalScore + action.payload,
+        },
+      };
     case 'user/minusScore':
-      return { ...state, totalScore: state.totalScore - action.payload };
+      return {
+        ...state,
+        user: {
+          ...state.user!,
+          totalScore: state.user!.totalScore - action.payload,
+        },
+      };
+
     default:
       return state;
   }
