@@ -1,18 +1,21 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
 
 const app = express();
-const PORT = process.env.PORT ?? 5000;
-const mentorsRouter = require('./routes/api/mentors.routes');
-const studentsRouter = require('./routes/api/students.routes');
-const serverConfig = require('./config/serverConfig');
+const PORT = process.env.PORT ?? 6969;
+
+const MainRouter = require('./routes/api/mainPage.routes');
 
 // config
-serverConfig(app);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cors());
+app.use(helmet());
 
 // routing
-app.use('/api/mentors', mentorsRouter);
-app.use('/api/students', studentsRouter);
+app.use('/', MainRouter);
 
 try {
   app.listen(PORT, () => {
